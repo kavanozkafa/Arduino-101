@@ -1,2 +1,2 @@
 # Arduino-101
-Basics of Arduino
+Basics of Arduino from www.arduino.cc/reference/
