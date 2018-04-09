@@ -1,0 +1,225 @@
+Structure
+Each Arduino Code must contain these functions
+
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
+
+Comments
+
+// single line comment
+/*
+multi
+line 
+comment
+*/
+
+#define DOZEN 12 
+#include <library.h>
+
+
+Setup
+Sets the mode of the digital I/O pin.
+
+pinMode(pin,[INPUT/OUTPUT/INPUT_PUL-LUP]);
+
+
+
+Qualifiers
+static // persists between calls
+volatile // use RAM
+const //make read-only
+PROGMEM // use flash
+
+
+Math
+min(x,y);
+max(x,y);
+abs(x);
+constrain(x,minval,maxval);
+map(val ,fromL,fromH,toL,toH);
+pow(base ,exponent);
+sqrt(x);
+sin(rad);
+cos(rad);
+tan(rad);
+
+Random Numbers
+randomSeed(seed) //Long or int
+long random(max)
+long random(min,max)
+
+
+Bits and Bytes
+lowByte()
+highByte()
+bitRead(x,bitn)
+bitWrite(x,bitn,bit)
+bitSet(x,bitn)
+bitClear(x,bitn)
+bit(bitn)
+
+
+Constants
+HIGH | LOW
+INPUT | OUTPUT
+true | false
+143 // Decimal
+0173 // Octal
+0b11011111 // Binary
+0x7B // Hex number
+7U // Force unsigned
+10L // Force long
+15UL // Force long unsigned
+10.0 //Force floating point
+2.4e5 // 240000
+
+
+Data Type
+void boolean (0,1,true,false)
+char ('a' -128 to 127)
+unsigned char (0 to 255)
+byte (0 to 255)
+int (-32,768 to 32,767)
+unsigned int (0 to 65535)
+word(0 to 65535)
+long(-2147483648 to 2147483647 )
+float (-3 40E to 3.40E )
+double (-3 40E to 3.40E )
+sizeof(myint) / 2 bytes
+
+
+
+Digital I/O 
+digitalWrite(pin,val) // val = HIGH or LOW
+int var = digitalRead(pin) // reads the value from pin high or low
+
+Analog I/O
+analogWrite(pin ,val) // writes an analog value val 0 to 255
+int var = analogRead(pin) //Reads the value from analog pins
+
+Advanced I/O
+tone(pin,freq) // pin must be one of the PWS pins
+tone(pin,freq,duration) duration in milliseconds
+noTone(pin) // turns off the tone on the pin.
+
+Time 
+delay(time_ms) //pauses the program for the amount of time in milliseconds.
+delayMicroseconds(time_us) // //pauses the program for the amount of time in microseconds.
+millis() // returns the number of milliseconds since the board running the current program.
+micros()// returns the number of microseconds since the board running the current program.
+
+
+Control Structures
+
+if(condition)
+{
+	condition is true
+}
+else 
+{
+	condition is false
+}
+
+for (int i = 0; i < count; ++i)
+{
+	/* code */
+}
+
+switch (condition){
+
+case1:
+
+break
+.
+.
+.
+.
+case n:
+break
+
+default :
+
+}
+
+Function
+return x // returns x value and x must match return type
+return // returns void
+<return type> <name>(parameters){
+
+	//code
+}
+int Salary(payment)
+{
+
+int salary=0;
+
+salary= payment*12;
+
+return salary;
+}
+
+Strings
+char Dizi[15]="arduino"
+char Dizi2[8]={'a','r','d','u','i','n','o'}
+char Dizi3[]="arduino"
+
+Arrays
+type name [ range];
+
+int array1[6];
+int array2[]={2,4,7,8,9,23}
+
+Conversion
+char()
+int()
+byte()
+long()
+word()
+float()
+
+
+Pointer
+& // reference operator
+* // dereference operator
+
+Bitwise Operators
+& // And
+| // Or
+^ // xor
+~ // not
+<< // bitwise left
+>> // bitwise right
+
+Math Operators
+= // assignment
++ // addition
+- // substraction
+* // multiplication
+/ // division
+% // mod
+++ // increment
+-- // decrement
++= // compound addition
+-= //compound substraction
+*= //compound multiplication
+/= //compound division
+&= //compound Bitwise And
+|= //compound Bitwise Or
+
+Logical Operators
+== // eq
+!= // not eq
+< // LT
+> // GT
+<= // LT or eq
+>= // GT or eq
+&& // Boolean AND
+|| // Boolean OR
+! // Boolean NOT
